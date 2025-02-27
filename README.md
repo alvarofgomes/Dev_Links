@@ -4,26 +4,6 @@ Bem-vindo ao meu **Hub de Links**! Este projeto foi desenvolvido como parte da m
 
 ---
 
-## Link para Visualização
-
-Acesse o hub de links online através deste link: (https://github.com/alvarofgomes/).
-
-<img alt="Projeto DevLinks" src='.github/Preview.png' >
-
----
-
-## Sobre o Projeto
-
-Este hub foi criado durante o curso [Discover da Rocketseat](https://app.rocketseat.com.br/journey/discover/contents) e serve como um centralizador de informações úteis, como:
-
-- **Portfólio**: Acesse meus principais projetos.
-- **Certificados / Cursos**: Confira os cursos que concluí.
-- **Redes Sociais**: Conecte-se comigo através do GitHub, LinkedIn, Instagram e Twitter.
-
-Com um design responsivo e amigável, este hub foi projetado para ser acessível em qualquer dispositivo.
-
----
-
 ## Tecnologias Utilizadas
 
 - **HTML5**: Estrutura base do projeto.
