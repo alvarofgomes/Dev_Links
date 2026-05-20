@@ -1,48 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Links e redes sociais de Alvaro Gomes — desenvolvedor web. Acesse meu portfólio, certificados e perfis profissionais.">
+    <meta name="author" content="Alvaro Gomes">
+
+    <meta property="og:title" content="Links | Alvaro Gomes">
+    <meta property="og:description" content="Desenvolvedor web. Acesse meu portfólio, certificados e redes sociais.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/Avatar.png">
+
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap">
+
     <link rel="stylesheet" href="style.css">
     <title>Links | Alvaro Gomes</title>
 
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const preferLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+            if (saved === 'light' || (!saved && preferLight)) {
+                document.documentElement.classList.add('light');
+            }
+        })();
+    </script>
 </head>
 
 <body>
-
     <div class="container">
-        <div class="profile"><img src="./assets/Avatar.png"
-                alt="Foto de Alvaro Gomes">
+        <div class="profile">
+            <img id="avatar" src="./assets/Avatar.png" alt="Foto de perfil de Alvaro Gomes">
             <p>Alvaro Gomes</p>
         </div>
-        <div class="switch" onclick="toggleMode()">
-            <button></button>
-            <span></span>
+
+        <div class="switch">
+            <button id="toggle-btn" aria-label="Alternar para modo claro" aria-pressed="false"></button>
+            <span aria-hidden="true"></span>
         </div>
+
         <ul>
-            <li><a href="https://alvarofgomes.github.io/Portfolio_Alvaro_Gomes-/" target="_blank" rel="noopener noreferrer">Veja meu Portifólio</a>
-                </l1>
-            <li><a href="https://github.com/alvarofgomes/Certificados" target="_blank"
-                    rel="noopener noreferrer">Certificados</a></l1>
-                <!-- <li><a href="#" target="_blank" rel="noopener noreferrer">Dicas para o Currículo</a></l1> -->
-            <!-- <li><a href="https://github.com/alvarofgomes/100-JavaScript" target="_blank" rel="noopener noreferrer">Projetos
-                    em JavaScript</a></l1> -->
+            <li><a href="https://alvarofgomes.github.io/Portfolio_Alvaro_Gomes-/" target="_blank" rel="noopener noreferrer">Veja meu Portfólio</a></li>
+            <li><a href="https://github.com/alvarofgomes/Certificados" target="_blank" rel="noopener noreferrer">Certificados</a></li>
         </ul>
+
         <div class="social">
-            <a href="https://github.com/alvarofgomes" target="_blank" rel="noopener noreferrer">
-                <ion-icon name="logo-github"></ion-icon>
+            <a href="https://github.com/alvarofgomes" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Alvaro Gomes">
+                <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
             </a>
-            <a href="https://www.linkedin.com/in/alvarofgomes/" target="_blank" rel="noopener noreferrer">
-                <ion-icon name="logo-linkedin"></ion-icon>
+            <a href="https://www.linkedin.com/in/alvarofgomes/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Alvaro Gomes">
+                <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
             </a>
-            <a href="https://www.instagram.com/_alvarogomes_/" target="_blank" rel="noopener noreferrer">
-                <ion-icon name="logo-instagram"></ion-icon>
+            <a href="https://www.instagram.com/_alvarogomes_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Alvaro Gomes">
+                <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
             </a>
         </div>
+
         <footer>
-            Desenvolvido por <a href="https://www.linkedin.com/in/alvarofgomes/" target="_blank"
-                rel="noopener noreferrer">Alvaro Gomes</a>
+            Desenvolvido por <a href="https://www.linkedin.com/in/alvarofgomes/" target="_blank" rel="noopener noreferrer">Alvaro Gomes</a>
         </footer>
     </div>
 
