@@ -1,40 +1,36 @@
-# Projeto Dev Links de Alvaro Gomes
+# Dev Links — Alvaro Gomes
 
-Bem-vindo ao meu **Hub de Links**! Este projeto foi desenvolvido como parte da minha jornada de aprendizado e reflete minha dedicação em criar soluções simples e úteis para organizar e compartilhar informações.
+Página de links pessoais com tema dark/light, animação de constelação e design responsivo — feita em vanilla HTML, CSS e JavaScript.
 
----
+![Preview](.github/Preview.png)
 
-## Tecnologias Utilizadas
-
-- **HTML5**: Estrutura base do projeto.
-- **CSS3**: Estilização e design responsivo.
-- **JAVASCRIPT**: Funcionalidade do código.
-- **Ferramentas**: VSCode, GitHub.
+🔗 **[Ver online](https://alvarofgomes.github.io/Dev_Links/)**
 
 ---
 
-## Como Personalizar
+## Funcionalidades
 
-1. Substitua os links no arquivo `index.html` pelos seus próprios.
-2. Edite o arquivo CSS para ajustar as cores, fontes e estilos de acordo com sua identidade visual.
-3. Adicione novas funcionalidades com JavaScript para incrementar o projeto.
+- Alternância dark/light com persistência via `localStorage` e respeito à preferência do sistema operacional
+- Fundo animado com constelação de nós via Canvas (com interação pelo mouse)
+- Avatar adaptado ao tema ativo
+- Links para portfólio, certificados e LinkedIn
+- Ícones de redes sociais (GitHub, LinkedIn, Instagram)
+- Indicador de status com animação de pulse
+- Suporte a `prefers-reduced-motion`
+- Acessibilidade: `aria-label`, `aria-pressed`, `focus-visible`
 
 ---
 
-## Sobre Mim
+## Tecnologias
 
-Sou **Alvaro Gomes**, Estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor backend focado em soluções inovadoras. Apaixonado por criar sistemas robustos e eficientes, atualmente, estou aprimorando minhas habilidades em JavaScript e React, explorando sua aplicação no desenvolvimento de APIs e arquiteturas server-side. Além disso, estou trabalhando em um projeto acadêmico na área de Tecnologia da Informação, integrando tecnologias modernas para resolver problemas reais.
+- HTML5, CSS3, JavaScript (vanilla)
+- [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) — Google Fonts
+- [Ionicons](https://ionic.io/ionicons) — ícones
 
 ---
 
 ## Contato
 
-Se tiver dúvidas ou quiser discutir ideias e oportunidades, sinta-se à vontade para entrar em contato:
-
 - **E-mail**: [alvarogomes098@gmail.com](mailto:alvarogomes098@gmail.com)
 - **LinkedIn**: [linkedin.com/in/alvarofgomes](https://www.linkedin.com/in/alvarofgomes)
 - **GitHub**: [github.com/alvarofgomes](https://github.com/alvarofgomes)
-
----
-
-Este projeto é atualizado regularmente e faz parte do meu aprendizado contínuo. Obrigado por visitar e explorar meu trabalho!
