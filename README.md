@@ -1,8 +1,8 @@
 # Dev Links — Alvaro Gomes
 
-Página de links pessoais com tema dark/light, animação de constelação e design responsivo — feita com Vue 3, TypeScript e Vite.
+Página de links pessoais com tema dark/light, fundo animado de constelação e design responsivo — feita com Vue 3, TypeScript e Vite.
 
-![Preview](.github/Preview.png)
+![Página nos temas escuro e claro](.github/screenshot.png)
 
 🔗 **[Ver online](https://alvarofgomes.github.io/Dev_Links/)**
 
@@ -10,14 +10,14 @@ Página de links pessoais com tema dark/light, animação de constelação e des
 
 ## Funcionalidades
 
-- Alternância dark/light com persistência via `localStorage` e respeito à preferência do sistema operacional
-- Fundo animado com constelação de nós via Canvas (com interação pelo mouse)
-- Avatar adaptado ao tema ativo
-- Links para portfólio, certificados e LinkedIn
+- Alternância dark/light com persistência via `localStorage` e respeito à preferência do sistema operacional, sem piscar o tema errado no carregamento
+- Fundo animado com constelação de nós via Canvas, com interação pelo mouse
+- Links em destaque para portfólio e certificados
 - Ícones de redes sociais (GitHub, LinkedIn, Instagram)
 - Indicador de status com animação de pulse
 - Suporte a `prefers-reduced-motion`
 - Acessibilidade: `aria-label`, `aria-pressed`, `focus-visible`
+- Favicon próprio e `og:image` para pré-visualização ao compartilhar o link
 
 ---
 
@@ -28,29 +28,53 @@ Página de links pessoais com tema dark/light, animação de constelação e des
 - ESLint + Prettier
 - [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) — Google Fonts
 - [Ionicons](https://ionic.io/ionicons) — ícones
-- Deploy no GitHub Pages via GitHub Actions
+- GitHub Actions + GitHub Pages — deploy
 
 ---
 
 ## Rodando localmente
+
+Requer Node.js 20 ou superior.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Outros scripts: `npm run build`, `npm run preview`, `npm run type-check`, `npm run lint`, `npm run format`.
+| Script               | O que faz                                  |
+| -------------------- | ------------------------------------------ |
+| `npm run dev`        | servidor de desenvolvimento                |
+| `npm run build`      | checagem de tipos + build de produção      |
+| `npm run preview`    | serve o build localmente                   |
+| `npm run type-check` | checagem de tipos com `vue-tsc`            |
+| `npm run lint`       | ESLint com correção automática             |
+| `npm run format`     | Prettier em `src/`                         |
+
+---
 
 ## Estrutura
 
 ```
+public/
+├── assets/avatar.jpg   # foto de perfil
+└── favicon.svg
 src/
-├── components/   # ProfileHeader, ThemeSwitch, LinkList, SocialLinks, AppFooter, NetworkBackground
-├── composables/  # useTheme, useNetworkBackground
-├── data/         # links.ts — perfil, links e redes sociais
-├── styles/       # tokens de cor e estilos globais
-└── types/
+├── components/         # ProfileHeader, ThemeSwitch, LinkList, SocialLinks, AppFooter, NetworkBackground
+├── composables/        # useTheme, useNetworkBackground
+├── data/links.ts       # perfil, links em destaque e redes sociais
+├── styles/index.css    # tokens de cor dos temas e estilos globais
+├── types/
+├── App.vue
+└── main.ts
 ```
+
+Para adicionar ou alterar um link, basta editar `src/data/links.ts`.
+
+---
+
+## Deploy
+
+Todo push na `main` dispara o workflow [`deploy.yml`](.github/workflows/deploy.yml), que roda o build e publica o `dist/` no GitHub Pages. O desenvolvimento acontece na branch `dev` e chega à `main` via pull request.
 
 ---
 
