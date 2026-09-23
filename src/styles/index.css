@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* dark (padrão) */
+  --bg: #070a14;
+  --bg-2: #080b17;
+  --text: #e9edf8;
+  --muted: #9ba6c4;
+  --faint: #5e6987;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-2: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.1);
+  --border-2: rgba(255, 255, 255, 0.2);
+
+  --blue: #2a6fdb;
+  --blue-bright: #5b95f5;
+  --purple: #8b5cf6;
+  --purple-br: #a782ff;
+  --grad: linear-gradient(115deg, #5b95f5 0%, #8b5cf6 100%);
+
+  /* cores usadas pelo canvas (lidas via useNetworkBackground) */
+  --net-node: 155, 182, 230;
+  --net-a: 91, 149, 245;
+  --net-b: 139, 92, 246;
+
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+
+  color-scheme: dark;
+}
+
+.light {
+  --bg: #eef1f8;
+  --bg-2: #e6eaf4;
+  --text: #1b2138;
+  --muted: #5a6486;
+  --faint: #8a93b0;
+  --surface: rgba(255, 255, 255, 0.66);
+  --surface-2: rgba(255, 255, 255, 0.9);
+  --border: rgba(40, 55, 110, 0.14);
+  --border-2: rgba(40, 55, 110, 0.3);
+
+  --blue-bright: #2a6fdb;
+  --purple-br: #7c4de0;
+  --grad: linear-gradient(115deg, #2a6fdb 0%, #7c4de0 100%);
+
+  --net-node: 90, 110, 170;
+  --net-a: 42, 111, 219;
+  --net-b: 124, 77, 224;
+
+  color-scheme: light;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
